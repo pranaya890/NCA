@@ -1,0 +1,1 @@
+it provides te reliable ordered and error checked delivery of stream of bytes (octets) between application running on host communication via an IP network
