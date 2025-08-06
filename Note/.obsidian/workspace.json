@@ -1,0 +1,220 @@
+{
+  "main": {
+    "id": "9bf099cb4e6d76b4",
+    "type": "split",
+    "children": [
+      {
+        "id": "d2a0348e8c1476a5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "13b5ad8693e8e36e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Linux/Fork.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Fork"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3abb63e4a6f0b419",
+    "type": "split",
+    "children": [
+      {
+        "id": "d602e256e11abff5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bdee4ee6780f7106",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "d3d41a995f314b29",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "process",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "a90dca44fd93baa0",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "735b762fee696005",
+    "type": "split",
+    "children": [
+      {
+        "id": "947b62a498d826ff",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "af6fcc936fd66409",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Linux/Text Manipulation Command.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Text Manipulation Command"
+            }
+          },
+          {
+            "id": "a1daabdf053d7578",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Linux.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Linux"
+            }
+          },
+          {
+            "id": "157d250780e16524",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "adee30c8da0d3401",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Linux.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Linux"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "13b5ad8693e8e36e",
+  "lastOpenFiles": [
+    "Linux/assets/Pasted image 20250805210045.png",
+    "Linux/assets/Pasted image 20250805204514.png",
+    "Linux/assets/Pasted image 20250805203704.png",
+    "Linux/assets/Pasted image 20250805203210.png",
+    "Linux/Processes and Jobs.md",
+    "Encoding and Decoding/Base 64.md",
+    "Linux/Fork.md",
+    "Linux/assets/Pasted image 20250805200625.png",
+    "Terminal Basics/TMUX.md",
+    "Linux/assets/Pasted image 20250804203243.png",
+    "Linux/Software Management.md",
+    "Linux/Pondering Path.md",
+    "Linux/assets/Pasted image 20250731220419.png",
+    "Linux/assets/Pasted image 20250731220353.png",
+    "Linux/assets/Pasted image 20250731220341.png",
+    "Linux/assets/Pasted image 20250731212124.png",
+    "Linux/assets/Pasted image 20250731212056.png",
+    "Linux/Files and Directory Permission.md",
+    "Terminal Basics/assets",
+    "Linux/Shebang.md",
+    "Linux/Linux Commands.md",
+    "Linux/globbing.md",
+    "Linux/SHELL VARIABLE.md",
+    "Learning Day 1.md",
+    "Linux/Linux Terminal.md",
+    "pwn college/Linux Luminarium/Globbing.md",
+    "pwn college/Linux Luminarium/assets",
+    "pwn college",
+    "pwn college/Linux Luminarium",
+    "Linux/Manual Page.md",
+    "Linux/Text Manipulation Command.md",
+    "Linux/Linking Files.md",
+    "Disk Partition.md",
+    "Bandit.md",
+    "Pwn college/challenges program.md",
+    "Pwn college/assets",
+    "Linux/Secure shell.md",
+    "Pwn college",
+    "Networking/Telnet.md",
+    "links worth visiting.md",
+    "Shortcut.md",
+    "Networking/Port Scanner.md",
+    "Networking/assets",
+    "Extras/assets",
+    "Encoding and Decoding/assets",
+    "Encoding and Decoding"
+  ]
+}
