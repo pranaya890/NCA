@@ -80,3 +80,31 @@ we can add debian or ubuntu repository after kali repository in `sources.list`
 when we request a software package, the system first checks the Kali repository and if the package isn't found there then it searches the Debian or Ubuntu repository.
 the location of `source.list` file is `/etc/apt/sources.list` and we can open it
 
+``` Shell
+nano /etc/apt/sources.list
+```
+
+![[Pasted image 20250806210637.png]]
+
+### Repository Category in Linux Distribution
+- main: Contains supported open-source software.
+- universe: Contains community-maintained open-source software
+- multiverse: Includes software restricted by copyright or legal issues
+- restricted: Contains proprietary device drivers
+- backports: Offers packages from later releases.
+
+### Installing Softwares with git
+search for repository in git
+and clone it using `git clone`
+```Shell
+git clone https://github.com/vanhauser-thc/thc-hydra.git
+```
+
+after cloning we can read `README.md` file for installation guide
+then we can  go to the cloned repository then
+``` Shell
+cd path_to_cloned_repository
+./configure
+make
+make install
+```
