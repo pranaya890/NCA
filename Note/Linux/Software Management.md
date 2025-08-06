@@ -70,4 +70,13 @@ pip uninstall <package-name> #to uninstall a package
 pip list #used to list the installed packages of python
 
 ```
-#### Adding repository to your source linux
+#### Adding repository to your `source.list` file
+the server that host software for specific linux distribution are known as repositories
+every Linux distribution has its own repositories
+the repository contain software specifically developed and configured for that distribution.
+in kali Linux, the primary repository is tailored for security and hacking tools.
+repositories the system searches for software are defined in the `sources.list` file.
+we can add debian or ubuntu repository after kali repository in `sources.list`
+when we request a software package, the system first checks the Kali repository and if the package isn't found there then it searches the Debian or Ubuntu repository.
+the location of `source.list` file is `/etc/apt/sources.list` and we can open it
+
