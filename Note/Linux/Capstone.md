@@ -50,3 +50,48 @@ What feature of Zsh provides command history-based suggestions? auto-suggestions
 What does the `#` symbol indicate in the Linux shell prompt? root user
 What Linux distributions often lack a GUI by default, requiring terminal usage? ubuntu server
 
+### Task 4
+At first i downloaded the ova file then i imported it to vm of my pc
+then i set the network to bridge adapter
+then i stasted ubuntu machine
+and logged in there using `john` as username and `john123` as password
+then i watched ip address of both machines using `ip a` then
+i pinged the ubuntu server from kali vm using `ping` command then i checked the ping from ubuntu server using `sudo tcpdump -i eth0 icmp` command 
+`tcpdump` is **packet capture tool** that lets us see real-time network traffic. 
+`-i eth0` tells `tcpdump` to listen on the `eth0` network interface
+`icmp` tells `tcpdump` to filter and only show ICMP packets  these include ping requests
+
+``` Shell
+ping 192.168.1.75
+```
+
+then i use `netdiscover` tool to find live host on network
+```Shell
+sudo netdiscover -r 192.168.1.0/24
+```
+
+![[Pasted image 20250815203055.png]] then i used ssh to connect to the machine using `ssh john@192.168.1.75` and john123 as password
+
+
+### Task 5
+to know the kernel version we can navigate to `/proc/version`
+![[Pasted image 20250815204231.png]] 
+
+![[Pasted image 20250815204322.png]]
+
+
+
+![[Pasted image 20250815204609.png]]
+![[Pasted image 20250815204623.png]]
+
+![[Pasted image 20250815204815.png]]
+![[Pasted image 20250815204843.png]]
+![[Pasted image 20250815205824.png]]
+
+
+![[Pasted image 20250815211519.png]]
+
+for the last question i used find command with `-group` and `-perm` command for finding the file with test group and with permission `444`
+``` Shell
+find / -group test -perm 444 2>/dev/null
+```
