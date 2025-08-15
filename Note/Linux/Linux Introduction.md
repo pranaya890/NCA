@@ -1,10 +1,17 @@
+
+
 Open source OS based on UNIX architecture
 Created by Linus Torvalds in 1991 
+undergoing development by `Richard Stallman`
 Follows monolithic kernel( entire OS runs in a single kernel) design 
+core component is kernel
 ![[Pasted image 20250706010810.png]]
 
 Widely used in servers, cyber security, programming, embedded systems, and ethical hacking 
 Examples Kali, Ubuntu, Ubuntu,Debian,Arch etc
+
+Unix based system developed by apple is `macOS`
+
 ### Why Linux over Unix?
 Free and Open source
 Run on a wide range of hardware
