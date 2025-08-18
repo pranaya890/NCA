@@ -50,3 +50,25 @@ sudo ifconfig eth0 192.168.1.223 netmask 255.255.255.1  broadcast 192.168.1.255
 
 ### Changing MAC address
 it is 
+
+
+
+
+### Manipulating the domain name system
+- DNS translates human readable  domain names into ip address
+- if hacker modify the DNS they can redirect user to malicious  websites with their knowledge which is called DNS Spoofing or DNS poisioning
+- this can lead to malware infection, phising attack  or data breaches
+- securing DNS server can be done by encrypted DNS  protocols  like DNS over  HTTPS are essential
+#### Dig
+- Domain information groper  is linux tool used to query DNS server and  retrive detailed information about domain name,IP address and DNS record
+- such as A records (ipv4 addresses) AAAA records (IPv6address), MX records (mail servers), NS records (name servers) and CNAME records (domain aliases)
+- example `dig google.com` provides details about google DNS
+- it is used for troubleshooting DNS issues, verifying domain configurations and analysing dns responses
+- its flexibility and detailed output make it a preferred tool for network administrators and security professionals
+#### Changing my DNS server
+- DNS server is often changed for enhancing privacy, speed or security 
+- we might switch to  DNS services like Google DNS (8.8.8.8) cloudflares DNS (1.1.1.1) for faster and  more secure internet access
+- to change dns we can edit `/etc/resolv.conf`
+```Shell
+sudo nano /etc/resolv.conf
+```

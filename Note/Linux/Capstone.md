@@ -95,3 +95,40 @@ for the last question i used find command with `-group` and `-perm` command for 
 ``` Shell
 find / -group test -perm 444 2>/dev/null
 ```
+
+in the last question of task 5 there is a file called file22 in folder 5 which will guide to next level
+content of file `bob:9f9d51bc70ef21ca5c14f307980a29d8`
+
+
+### Task 6
+- for solving the first  question i have to find the file location we have to login to using bob via ssh then we can use `grep` and its option `-n` to print number of lines
+![[Pasted image 20250818202028.png]]
+- for second question the first thing is to remove duplicate line we can do it by using ninja technique by sorting the file and printing only unique lines and redirect the output to new file then we can use previously used `grep` command to print the unique lines
+![[Pasted image 20250818202723.png]]
+- we can send output of one code as input to another cmd using `|`
+- for counting the number of lines starting from n we can use `grep` with `-c` and line starting with letter can be denoted using "^Letter" 
+![[Pasted image 20250818203256.png]]
+
+- we can count the user by going to home directory and listing all the users and adding +1 on that for root.
+![[Pasted image 20250818204929.png]]
+
+- `head` displays first few lines of text
+- in command `cut -d':' -f1 /etc/passwd` `:` is delimiter
+- text scanning tool for pattern scanning and processing is `awk`
+- in next question for finding output of `cut -d " " -f10 random_wordws.txt`, here `-d ` is delimeter and `-f10` is field 10 i.e. it cut out the tenth field
+![[Pasted image 20250818210145.png]]
+- for output of `awk -F'[:;]' 'NR == 12 {print "My name is", $1, $2}' students.txt` we can directly run or we can use `head -n 12` command to print because it takes 12th line and prints its 12 th input record 
+![[Pasted image 20250818215231.png]]
+- `-F` in above command is field separator
+### Task 7
+- the class is C (for more goto IP address note)
+- MAC= media access control
+-  djfa
+- to check connectivity of google.com we can use `ping 8.8.8.8`
+- linux file to manually map ip address to hostname is `/etc/hosts`
+- number of network interfaces in system: 2 (physical{eth0,wlan} and virtual(docker,lo))
+- by manually  mapping ip in `/etc/hosts` we get `nca{y0u_have_mapped_the_1p}`
+- file used to modify is `/etc/resolv.conf`
+- starting apache service `service apache2 start`
+- netstat command to view routing table `netstat -r`
+- 
