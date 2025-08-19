@@ -152,6 +152,32 @@ kill -9 25719
 
 ![[Pasted image 20250815120205.png]]
 
+### Start a job with priority
+`nice` command can be used to start a job with priority
+``` Shell
+nice -n PRIORITY command
+# PRIORITY -2 to 19 , 19 has lowest priority
+```
+
+### `uptime` command
+- it is  the command that shows how long the system has been running and shows the load average
+```Shell
+uptime
+```
+![[Pasted image 20250819224143.png]]
+
+### Cron jobs
+- it is a scheduled task in linux that runs automatically at specific times
+- allows to automate repetitive task
+``` Shell
+0 5 * * * directory/filename.sh
+# runs script every day 5 am o minute 5 hour
+```
+
+- used to automate task like backup the files, cleaning temporary directory sending automatic emails
+- we can use `crontab` command with `-l` to list the cronjobs for current user if any
+
+
 
 ### exit code
 every command in shell has its exit code we can see the exit code of recently run code by using `?` with `$` before it.

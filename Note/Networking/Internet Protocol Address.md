@@ -18,3 +18,9 @@ it is unique identifier assigned to network device
 spoofing it can help us to avoid tracking or access network that devices based on MAC address
 if a network block a device, the device MAC address can be changed to mimic/imitate an allowed one.
 
+### DHCP server
+- Dynamic Host Configuration Protocol
+- is network management protocol in IP
+- it automatically assigns IP and  other communication parameter using client server architecture
+- eliminates need of individually configuring networking parameters
+- 

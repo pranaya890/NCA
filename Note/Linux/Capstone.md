@@ -12,6 +12,7 @@ linux distribution beside kali for pentesting : parrotOS
 unix was developed in : AT&T bell labs
 
 ### Task 2
+primary role of hypervisor
 hypervisor that runs directly on software - type 1
 type 2 hypervisor that is free and open source - virtualbox
 file format used for pre configured kali images in virtual box - .ova
@@ -123,7 +124,12 @@ content of file `bob:9f9d51bc70ef21ca5c14f307980a29d8`
 ### Task 7
 - the class is C (for more goto IP address note)
 - MAC= media access control
--  djfa
+-  we can use command `dig` with its option `TXT` to find the txt while digging a website
+``` Shell
+dig ncateam.xyz TXT
+```
+- ![[Pasted image 20250819212733.png]]
+
 - to check connectivity of google.com we can use `ping 8.8.8.8`
 - linux file to manually map ip address to hostname is `/etc/hosts`
 - number of network interfaces in system: 2 (physical{eth0,wlan} and virtual(docker,lo))
@@ -131,4 +137,92 @@ content of file `bob:9f9d51bc70ef21ca5c14f307980a29d8`
 - file used to modify is `/etc/resolv.conf`
 - starting apache service `service apache2 start`
 - netstat command to view routing table `netstat -r`
-- 
+- yes `tcpdump` can be used to capture and analyse network traffic on specific interface
+- for last question i have to dig through different subdomains of `ncateam.xyz` we can use `crt.sh` for other for this we can get directly by exploring websites
+ ![[Pasted image 20250819213316.png]]
+![[Pasted image 20250819213559.png]]
+![[Pasted image 20250819213851.png]]
+
+for further tasks we can use 
+user: ram
+password: fe80::a00:27ff:fe4d:ad73
+### Task 8
+- term used for storage location used: repository
+- removing a software package along with configuration files: `sudo apt purge package_name`
+- command to upgrade package in ubuntu : `sudo apt upgrade`
+- to install flask using pip: `pip install flask`
+- command to install package  curl using apt : `sudo apt install curl`
+- to run the python file : `python filename.py`
+- to check status of apache2 : `systemctl status apache2`
+-  `sudo apt update ` used to upgrade all package? : no because we use `upgrade`
+- to remove `vim` from system: `sudo apt remove vim`
+- to install `htop` utility: `sudo apt install htop`
+
+### Task 9
+- if file has permission `rw-r--r--` , can a user not the owner modify it: no
+- numeric octal representation of `rwxr-xr--` is : 754
+- symbolic representation of `755` : `rwxr-xr-x`
+- command used to change the permission of a file: `chmod`
+- command used to change the ownership: `chown`
+- command used to change the group: `chgrp`
+- default permission of newly created file  assuming umask 022: 644
+-  default permission of newly created file  directory umask 022: 755
+- command used to display current umask value: `umask`
+- symbolic representation of permission `rwxrwxrwx`
+- usermod command option to  add user to supplimentary group: `-aG`
+- owner of `/home/ram/folder1` : root using `ls -l` command
+- group ownership of above folder : developer
+- the `d` in file permission denotes: directory
+- `lrwxrwxrwx 1 ram ram 20 Mar 11 15:18 script_link.py -> ../folder3/script.py` here script_link.py represents : symbolic link to file
+- `s` in directory permission says it is `SUID`
+- `S` represents `SGID`
+- `t` stands for sticky bit
+- secondary groups in linux: 2 we can find it using `groups` command
+ ![[Pasted image 20250819222030.png]]
+- permission added by `chmod u+r file.txt` command: read
+- octal numeric representation of `/home/ram/folder5/bash_script.sh` : 000
+![[Pasted image 20250819222301.png]]
+- after running `bash_script.sh` using command `chmod a+rwx bash_script.sh`
+- and executing it `./bash_script.sh` we get
+- krishna:2819081d4853b8b0c344bcc07a54c988
+
+### Task 10
+- command used to monitor system process in real time is : top
+- command used to display detailed  information about all processes: ` ps aux`
+- command used to display uptime and load average of system is : `uptime`
+- command to start process with specific priority: nice
+- command to bring  a background process to foreground:  fg
+- signal sent by `kill -9`to forcefully terminate a process: `SIGKILL`
+- signal sent by `kill -15`to forcefully gracefully terminate a process: `SIGTERM`
+- symbol used to run process in background : &
+- command used to list cron jobs of current user : `crontab -l`
+- command used to list all background jobs: `jobs`
+- command to kill process using PID: kill
+- `R` in `ps` output mean running
+- kill process owned by user: `pkill -u username`
+- command to edit cronjobs  for current user: `crontab -e`
+- to find the script that is running in  the cronjob, first login to krishna then list the jobs using `crobtab -l` then the script is shown
+![[Pasted image 20250819232415.png]]
+
+### TASK 11
+- to display all environment variable: printenv
+- set temporary environment variable: export
+- symbol used to  reference an environment var: $
+- command to check value of path: `echo $PATH`
+- command used to remove environment variable: unset
+- command to check value of API_KEY: echo $API_KEY
+- command to check value of NCA variable: echo $ NCA
+
+
+
+
+### TASK 12
+- better compression lossy or loseless: loseless
+- flag to create  tar archive: -c
+- flag to extract a tar archive: -x
+- You have folders `folder1`, `folder2`, and files `file1.txt`, `file2.txt`. You used the command `tar -cv folder1 folder2 file1.txt file2.txt`, which option is missing?: -f
+- creating tar archive reduce  file size : no
+![[Pasted image 20250819232706.png]]
+
+![[Pasted image 20250819233519.png]]
+![[Pasted image 20250819233835.png]]
