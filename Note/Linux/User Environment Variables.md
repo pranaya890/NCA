@@ -1,6 +1,3 @@
-Sure! Here's the **single-topic summary in bullet points** for easy note-taking:
-
----
 
 ### **Environment Variables in Linux – Key Points**
 
@@ -16,12 +13,12 @@ Sure! Here's the **single-topic summary in bullet points** for easy note-taking:
 
 #### **Uses and Benefits:**
 
-- **Customization**: Adjust system or application behavior per user or environment.
--  **Security**: Store sensitive data outside of code to reduce exposure.
--  **Scripting**: Scripts can access and use environment-specific data.
-- **Portability**: Ensures cross-platform compatibility for applications.
-- **Flexibility**: Easily update configurations without modifying code or scripts.
-- Overall, environment variables make Linux systems more **secure**, **configurable**, and **user-friendly**.
+- Customization: Adjust system or application behavior per user or environment.
+-  Security: Store sensitive data outside of code to reduce exposure.
+-  Scripting: Scripts can access and use environment-specific data.
+- Portability: Ensures cross-platform compatibility for applications.
+- Flexibility: Easily update configurations without modifying code or scripts.
+- Overall, environment variables make Linux systems more secure, configurable, and user-friendly.
 ## Viewing and Modifying Environment Variables
 - Use the `env` or `printenv` command to **list all current environment variables**.
 - Both commands display variables in the format: `KEY=value`.
@@ -31,7 +28,7 @@ Sure! Here's the **single-topic summary in bullet points** for easy note-taking:
 - To see all shell variables, including user-defined ones, use the `set` command (note: it shows more than just environment variables).
 - You can also use `echo $VARIABLE_NAME` to **view the value** of a specific variable.
 - Environment variables can be **temporarily modified** in the shell by using `VARIABLE=value` syntax before a command or by exporting it.
-- To **permanently modify environment variables**, add export statements to configuration files like:
+- To permanently modify environment variables, add export statements to configuration files like:
 - `~/.bashrc` (for bash shell)
 - `~/.zshrc` (for zsh shell)
 - `~/.profile` or `/etc/environment` (for login shells)
@@ -40,15 +37,15 @@ Sure! Here's the **single-topic summary in bullet points** for easy note-taking:
 
 ## Filtering for Particular Variables
 - The `set` command lists all shell and environment variables, but the output can be overwhelming.
-- To make it more readable, use `set | more` for **paged output**, allowing you to scroll through results.
-- For **faster and more precise searching**, use the `grep` command to filter for a specific variable.
+- To make it more readable, use `set | more` for paged output, allowing you to scroll through results.
+- For faster and more precise searching, use the `grep` command to filter for a specific variable.
 - Example: To find the `PATH` variable, use `set | grep PATH` or `printenv | grep PATH`.
 - This method quickly locates variables without manually scanning through a long list.
 - The `PATH` variable:
-- Contains a **colon-separated list** of directories.
-- These directories are searched **in order** when you run a command.
-- It **does not store commands**, only **directories where commands may exist**.
-- The **first matching executable** found in the listed directories is the one that gets executed.
+- Contains a colon-separated list of directories.
+- These directories are searched in order when you run a command.
+- It does not store commands, only directories where commands may exist.
+- The first matching executable found in the listed directories is the one that gets executed.
 ![[Pasted image 20250820002507.png]]
 This will filter the output of `set` to display only the lines containing the `PATH` variable, making it easier to locate and inspect.
 
@@ -79,3 +76,26 @@ This will filter the output of `set` to display only the lines containing the `P
 These are the directories where  terminal searches for commands. For instance, when we type `ls`, the system checks each of these directories in order, finds the `ls` executable, and runs it. Each directory in the `PATH` is separated by a colon (`:`)
 ## Adding a Directory to Your PATH Variable
 
+- to make a tool accessible from any directory we have to add  it to path variable
+- to add any directory to PATH variable we can assign it using `PATH=$PATH:/path to tool`
+- `$PATH:` appends to PATH variable rather than replacing it
+-  common mistake while assigning is overwriting `PATH=/path to tool`
+### Creating the user defined variable
+- In shell we can create user defined variable to store data, simplify task or customise environment
+- can be used to avoid repititative typing and enhancing workflow
+- to create a user defined variable we can assign value to any custom variable
+- `CUSTOM=~/Desktop/hello` after defining we can directly access variable using `$` symbol
+![[Pasted image 20250820201025.png]]
+![[Pasted image 20250820201042.png]]
+- can also be used for navigating to certain folder
+![[Pasted image 20250820201204.png]]
+
+- we can use `export` command with variable to make them available for child process and script
+- user defined variable is temporary for current session only 
+- for making it permanent we can add our variable to shell configuration files like `.bashrc` and `.zshrc`
+- can also be used for running shell scripts by assigning path to a variable
+- `CUSTOM_VAR=/path_to_script`
+- then we can use `bash $CUSTOM_VAR`
+- `unset` command can be used to remove a value of a variable
+ ![[Pasted image 20250820201927.png]]
+ 
