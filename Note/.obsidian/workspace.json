@@ -4,35 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "6d1f80ee40b90ee5",
+        "id": "a3312677eff0535b",
         "type": "tabs",
         "children": [
           {
-            "id": "12f37c06de0ed3ed",
+            "id": "b490d6178beab354",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Networking/Introduction to Networking.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Introduction to Networking"
-            }
-          },
-          {
-            "id": "158967eb3405ee69",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "git token.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "git token"
+              "title": "New tab"
             }
           }
         ]
@@ -183,10 +165,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "12f37c06de0ed3ed",
+  "active": "b490d6178beab354",
   "lastOpenFiles": [
     "git token.md",
+    "Networking/OSI Model.md",
+    "Networking/assets/Pasted image 20250822202625.png",
+    "Networking/assets/Pasted image 20250822202547.png",
+    "Networking/assets/Pasted image 20250822201547.png",
     "Networking/Introduction to Networking.md",
+    "Networking/Transmission Control Protocol.md",
     "Linux/User Environment Variables.md",
     "Linux/assets/Pasted image 20250820201927.png",
     "Linux/assets/Pasted image 20250820201204.png",
@@ -195,11 +182,8 @@
     "Linux/assets/Pasted image 20250820002811.png",
     "Linux/assets/Pasted image 20250820002507.png",
     "Linux/assets/Pasted image 20250820002308.png",
-    "Linux/assets/Pasted image 20250820002233.png",
     "Linux/Processes and Jobs.md",
     "Linux/Capstone.md",
-    "Linux/assets/Pasted image 20250819233835.png",
-    "Linux/assets/Pasted image 20250819233519.png",
     "Linux/Software Management.md",
     "Linux/Manage and Analyse Network.md",
     "Networking/Internet Protocol Address.md",
@@ -218,9 +202,6 @@
     "Linux/Text Manipulation Command.md",
     "Linux/Linux Introduction.md",
     "Linux/Linux Structure.md",
-    "Linux/Installing Kali linux.md",
-    "Linux/Fork.md",
-    "Encoding and Decoding/Base 64.md",
     "Terminal Basics/assets",
     "pwn college/Linux Luminarium/assets",
     "pwn college",
