@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a3312677eff0535b",
+        "id": "b6a8c5b2eabf816c",
         "type": "tabs",
         "children": [
           {
-            "id": "b490d6178beab354",
+            "id": "41947575816a89a5",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -165,10 +165,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b490d6178beab354",
+  "active": "41947575816a89a5",
   "lastOpenFiles": [
     "git token.md",
+    "Networking/TCP IP Model.md",
     "Networking/OSI Model.md",
+    "Networking/assets/Pasted image 20250825204957.png",
+    "Networking/assets/Pasted image 20250825202532.png",
+    "Networking/assets/Pasted image 20250825201025.png",
+    "THM/Linux Strengthening.md",
+    "THM",
     "Networking/assets/Pasted image 20250822202625.png",
     "Networking/assets/Pasted image 20250822202547.png",
     "Networking/assets/Pasted image 20250822201547.png",
@@ -179,9 +185,6 @@
     "Linux/assets/Pasted image 20250820201204.png",
     "Linux/assets/Pasted image 20250820201042.png",
     "Linux/assets/Pasted image 20250820201025.png",
-    "Linux/assets/Pasted image 20250820002811.png",
-    "Linux/assets/Pasted image 20250820002507.png",
-    "Linux/assets/Pasted image 20250820002308.png",
     "Linux/Processes and Jobs.md",
     "Linux/Capstone.md",
     "Linux/Software Management.md",
@@ -201,7 +204,6 @@
     "Linux/Compressing and Archiving.md",
     "Linux/Text Manipulation Command.md",
     "Linux/Linux Introduction.md",
-    "Linux/Linux Structure.md",
     "Terminal Basics/assets",
     "pwn college/Linux Luminarium/assets",
     "pwn college",
@@ -210,7 +212,6 @@
     "Pwn college",
     "Networking/assets",
     "Extras/assets",
-    "Encoding and Decoding/assets",
-    "Encoding and Decoding"
+    "Encoding and Decoding/assets"
   ]
 }
