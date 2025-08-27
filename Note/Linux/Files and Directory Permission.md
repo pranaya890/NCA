@@ -239,6 +239,9 @@ suppose we have a copy file of `/etc/shadow` as `shadow-leak`
  we have to first change the directory to the directory to shadow-leak
  then 
  ``` Shell
- johb ./shadow-leak
+ john ./shadow-leak
 ```
 ![[Pasted image 20250726005014.png]]
+
+
+

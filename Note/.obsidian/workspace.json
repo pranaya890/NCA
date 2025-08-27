@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "b6a8c5b2eabf816c",
+        "id": "32b36f1d522c5f3f",
         "type": "tabs",
         "children": [
           {
-            "id": "41947575816a89a5",
+            "id": "5b83b700e3eb3f02",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "git token.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "git token"
             }
           }
         ]
@@ -49,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "john ",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -165,10 +169,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "41947575816a89a5",
+  "active": "5b83b700e3eb3f02",
   "lastOpenFiles": [
-    "git token.md",
+    "Untitled.base",
+    "Linux/Files and Directory Permission.md",
     "Networking/TCP IP Model.md",
+    "Networking/assets/Pasted image 20250827204244.png",
+    "Networking/assets/Pasted image 20250827202101.png",
+    "Networking/assets/Pasted image 20250827201656.png",
+    "Networking/assets/Pasted image 20250827200106.png",
+    "Networking/assets/Pasted image 20250827195859.png",
+    "git token.md",
     "Networking/OSI Model.md",
     "Networking/assets/Pasted image 20250825204957.png",
     "Networking/assets/Pasted image 20250825202532.png",
@@ -177,14 +188,9 @@
     "THM",
     "Networking/assets/Pasted image 20250822202625.png",
     "Networking/assets/Pasted image 20250822202547.png",
-    "Networking/assets/Pasted image 20250822201547.png",
     "Networking/Introduction to Networking.md",
     "Networking/Transmission Control Protocol.md",
     "Linux/User Environment Variables.md",
-    "Linux/assets/Pasted image 20250820201927.png",
-    "Linux/assets/Pasted image 20250820201204.png",
-    "Linux/assets/Pasted image 20250820201042.png",
-    "Linux/assets/Pasted image 20250820201025.png",
     "Linux/Processes and Jobs.md",
     "Linux/Capstone.md",
     "Linux/Software Management.md",
@@ -200,10 +206,8 @@
     "links worth visiting.md",
     "Solving a Challenge of RSA.md",
     "Shortcut.md",
-    "Linux/Files and Directory Permission.md",
     "Linux/Compressing and Archiving.md",
     "Linux/Text Manipulation Command.md",
-    "Linux/Linux Introduction.md",
     "Terminal Basics/assets",
     "pwn college/Linux Luminarium/assets",
     "pwn college",
