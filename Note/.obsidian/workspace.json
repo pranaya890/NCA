@@ -4,11 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "32b36f1d522c5f3f",
+        "id": "eeea9a6139322bbe",
         "type": "tabs",
         "children": [
           {
-            "id": "5b83b700e3eb3f02",
+            "id": "9fcaab6ada6adda8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Networking/Subnet Practice.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Subnet Practice"
+            }
+          },
+          {
+            "id": "c3918490a4a2ca68",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -21,7 +35,8 @@
               "title": "git token"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -169,45 +184,46 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5b83b700e3eb3f02",
+  "active": "c3918490a4a2ca68",
   "lastOpenFiles": [
+    "Learning Day 1.md",
+    "links worth visiting.md",
+    "Shortcut.md",
     "Untitled.base",
-    "Linux/Files and Directory Permission.md",
+    "Solving a Challenge of RSA.md",
+    "Networking/Internet Protocol Address.md",
+    "Networking/Introduction to Networking.md",
+    "Networking/OSI Model.md",
+    "Networking/Socat.md",
+    "Networking/SSL and TSL.md",
+    "Networking/Subnet Practice.md",
     "Networking/TCP IP Model.md",
+    "Networking/Telnet.md",
+    "Networking/Transmission Control Protocol.md",
+    "Networking/assets/Pasted image 20250829210740.png",
+    "Networking/assets/Pasted image 20250828210140.png",
+    "Networking/assets/Pasted image 20250828200728.png",
+    "Networking/assets/Pasted image 20250828191101.png",
+    "git token.md",
+    "Linux/Files and Directory Permission.md",
     "Networking/assets/Pasted image 20250827204244.png",
     "Networking/assets/Pasted image 20250827202101.png",
     "Networking/assets/Pasted image 20250827201656.png",
     "Networking/assets/Pasted image 20250827200106.png",
     "Networking/assets/Pasted image 20250827195859.png",
-    "git token.md",
-    "Networking/OSI Model.md",
     "Networking/assets/Pasted image 20250825204957.png",
-    "Networking/assets/Pasted image 20250825202532.png",
-    "Networking/assets/Pasted image 20250825201025.png",
     "THM/Linux Strengthening.md",
     "THM",
-    "Networking/assets/Pasted image 20250822202625.png",
-    "Networking/assets/Pasted image 20250822202547.png",
-    "Networking/Introduction to Networking.md",
-    "Networking/Transmission Control Protocol.md",
     "Linux/User Environment Variables.md",
     "Linux/Processes and Jobs.md",
     "Linux/Capstone.md",
     "Linux/Software Management.md",
     "Linux/Manage and Analyse Network.md",
-    "Networking/Internet Protocol Address.md",
     "Linux/Linux Commands.md",
     "Terminal Basics/TMUX.md",
     "Terminal Basics/Basic Terminal Commands.md",
     "Terminal Basics/Installing a .deb package in linux.md",
     "Bandit.md",
-    "Disk Partition.md",
-    "Learning Day 1.md",
-    "links worth visiting.md",
-    "Solving a Challenge of RSA.md",
-    "Shortcut.md",
-    "Linux/Compressing and Archiving.md",
-    "Linux/Text Manipulation Command.md",
     "Terminal Basics/assets",
     "pwn college/Linux Luminarium/assets",
     "pwn college",
@@ -215,7 +231,6 @@
     "Pwn college/assets",
     "Pwn college",
     "Networking/assets",
-    "Extras/assets",
-    "Encoding and Decoding/assets"
+    "Extras/assets"
   ]
 }
