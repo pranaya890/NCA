@@ -117,5 +117,48 @@ PAT(Port Address Translator): many to one  using port numbers
 
 ### IPv6 Addressing
 - developed to provide a virtually limitless number of  addresses
-- 128 bit address
+- 128 bit address ( written in 8 group of 16 bits)
 - $2^{128}$ = 340 undecillion 
+- simplified header, better multicast support (single data packet to multiple destination), and improved security
+Address representation:
+removing leading zeros, using ::for consecutive zeros
+IPv6 address can be compressed  to address more readable 
+EXAMPLE `34F6:0000:0000:0000:0000:0001:0095:9000` => `34F6 :: 1:95:9000`
+### Types of IPv6 address
+- Unicast: for single device communication
+- multicast: for groups, one to many, begins with `ff00::`
+- anycast: allows communication to nearest node/ devices in a group, efficiently utilizes network resource, especially in load balancing
+
+### Global Unicast Address
+- IPv6 address that is equivalent of public IPv4 address
+-  routable acrossthe internet and begin with "2" or "3"
+![[Pasted image 20250901202420.png]]
+the underlined address are global unicast address which begins with 2 or 3
+
+### Link- Local Address
+-  used for communication with in local network
+- it start with `fe80::` and are not routable outside  the local network
+### Stateless Auto Configuration ( SLAAC)
+- IPv6's stateless auto  configuration  feature
+- SLAAC allows  device to configure their own address without a DHCP server
+### IPv6 Security feature
+- mandates IPsec , making secure communication  more  inherent to protocol
+### IPv6 Neighbour Discover Protocol (NDP)
+- replaces ARP and helps to discover other nodes to  the link-local
+- enables auto-configuration of nodes and ensures smoother operation
+### Transition Mechanism:  
+#### Dual Stack
+- allows both IPv6 and IPv4 to  run in devices
+- key transition mechanism that helps in gradual adoption of   IPv6
+### Tunneling
+- in order to communicate devices with IPv4 and IPv6, then the devices wont recognize each others headers
+- tunnelling wraps the IPv6 packets  inside IPv4 packets for transmission over IPv4 network
+#### NAT64
+- allows IPv6 device to communicate with IPv4 devices
+- bridges the gap between IPv6 only and IPv4 only devices
+
+### Deployment Challenge of IPv6
+device compatibility 
+cost 
+knowledge
+
