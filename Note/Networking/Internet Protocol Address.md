@@ -16,7 +16,11 @@ and host part specifies the device in the network
 ### Types of IP
 - public ip: used in internet
 - private ip: used within local network
+RFC 1918 defines the following three ranges of private IP addresses:
 
+- `10.0.0.0` - `10.255.255.255` (`10/8`)
+- `172.16.0.0` - `172.31.255.255` (`172.16/12`)
+- `192.168.0.0` - `192.168.255.255` (`192.168/16`)
 
 ![[Pasted image 20250828191101.png]]
 
@@ -162,3 +166,38 @@ device compatibility
 cost 
 knowledge
 
+
+### Telnet
+- TELNET is a network protocol used for remote terminal connections.
+- Operates over TCP/IP, typically on port 23.
+- TELNET client allows connection to any server listening on a TCP port.
+- Sends and receives data as plain text (not encrypted).
+- Insecure for remote administration; replaced by SSH.
+- Echo and Daytime servers are considered security risks.
+
+**Echo Server:**
+- Listens on TCP port 7.
+- Echoes back any data sent.
+- Used for testing TCP connectivity
+
+**Daytime Server:**
+- Listens on TCP port 13.
+- Sends current date and time.
+- Rarely used; disabled by default on most systems.
+**HTTP (Web) Server:**
+
+- Listens on TCP port 80.
+- Sends HTML content in response to HTTP requests.
+- Can interact using TELNET by manually typing HTTP commands.
+
+**Using TELNET:**
+
+- Command: `telnet <IP/hostname> <port>`
+- Example: `telnet 192.168.1.10 7`
+- Send text to communicate with the service.
+- Use for manual interaction with TCP services.
+
+**To close TELNET session:**
+
+- Press `CTRL + ]`
+- Then type `quit` and press Enter.

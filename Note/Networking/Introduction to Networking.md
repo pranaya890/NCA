@@ -12,11 +12,11 @@
 - networking knowledge helps pentesters to exploit vulnerabilities like open ports, misconfigured services, insecured protocols simulating how attackers may infiltrate into network
 - its knowledge is crucial in identifying attack vectors in cybersecurity
 - concepts like IP addressing, DNS, protocol(HTTP,FTP), firewalls and routers all play vital roles in how to communicate and how and where attacks can be launched
-- knowing network operations allows tester to map out potential attack surfaces, understand impact of vulnerability andtake effective counter measure
+- knowing network operations allows tester to map out potential attack surfaces, understand impact of vulnerability and take effective counter measure
 - pentester uses tools like  Nmap to scan networks for open ports and active services
 - wireshark to analyze network traffic 
 - metasploit to exploit network based vulnerabilities
-- 
+
 ### Key components of networking
 - Nodes( devices)
 -  Links ( wired/ wireless)
@@ -40,8 +40,8 @@
 
 ## Network Topology
 - Ring Topology : connected in ring like structure, data flow is unidirectional, data packets collision is reduced, single device failure can disrupt the whole network
-- Bus topology: different nodes are connected to a single bus, cost effective for small netwok, frequent data collision, disruption on bus can put down entire network
+- Bus topology: different nodes are connected to a single bus, cost effective for small network, frequent data collision, disruption on bus can put down entire network
 - Star Topology: connected to central hub, hub maintains one to many connection, failing of hub fails all network, easy to install and manage, failure of other nodes excluding hub creates no effect
-- Mesh Topology: every node is connected to every other node,  high redundancy and reliability, expensive and complex to installl
+- Mesh Topology: every node is connected to every other node,  high redundancy and reliability, expensive and complex to install
 - Hybrid Topology: combination of multiple topologies, flexible and scalable, complex to configure and manage.
 	

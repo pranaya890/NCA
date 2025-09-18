@@ -7,7 +7,7 @@
 ### Importance of OSI Model
 - to standardize the network communication i.e clear structure of data transmission
 - allows different networking devices to communicate easily
-- helps cybersecurity professionals to identify vulnerability and secure network effictively
+- helps cybersecurity professionals to identify vulnerability and secure network effectively
 - to troubleshoot network by checking each layer
 - provides universal language of networking
 
@@ -30,7 +30,7 @@
 - ensures data is transferred correctly between  two directly connected devices
 - responsible for communication of two directly connected devices (client -router, router -router)
 - deals with MAC address (physical addressing), frames and error detection
-- protocols like ethernet,  wifi  and PPP(point to point protocol)
+- protocols like Ethernet,  WiFi  and PPP(point to point protocol)
 Examples:  MAC addressing , Ethernet  ( frame relays)
 #### Sub layer for Data link layer
 1. Media Access Control( MAC): control the devices on a network  to gain access to a medium
@@ -51,7 +51,7 @@ Functions:
 Function:
 - segmentation and re assembly of data
 - flow control and error control
-- ensures complete data transfer (retransmission in case of error)
+- ensures complete data transfer (re-transmission in case of error)
 Examples:
 - TCP( Transmission Control Protocol) - reliable , ordered and error checked delivery. and  connection oriented. Eg : text chatting
 - UDP (User Datagram Protocol)- faster but less reliable, connection less. Eg: online gaming ( slight data loss ruin gameplay) and live streaming
@@ -60,15 +60,15 @@ Examples:
 -  in UDP the sever request the data and client responds by sending the data there is no acknowledgement so it transfers only data but data flow and server locations are unknown or the data is delivered or not
 ### Layer 5: Session Layer
 - responsible for establishing,  managing and termination connection
-- maintains dialog control between computers ( half duples, and full duplex)
+- maintains dialog control between computers ( half duplex, and full duplex)
 Examples: online banking, login to a website,  video calls, Network file system (NFS), Remote  Procedural Call( RPC)
 ![[Pasted image 20250825202532.png]]
-here the request and response in sender and receiver respectively for sender and reciever for connection is manages by session layer.
+here the request and response in sender and receiver respectively for sender and receiver for connection is manages by session layer.
 
 ### Layer 6: Presentation Layer
 - responsible for formatting, encrypting and  compressing of data so it can be properly understood by the receiver application
-- handles data fomatting and is responsible for encryption / decription for security purposes
-- Examples: Encryption (SSL/TLS), character encoding ( ASCII, Unicode), Date compression ( ZIP, MP3, JPEG) 
+- handles data formatting and is responsible for encryption / decryption for security purposes
+- Examples: Encryption (Secure Socket Layer(SSL)/Transport Layer Security (TLS), character encoding ( ASCII, Unicode), Date compression ( ZIP, MP3, JPEG) 
 ![[Pasted image 20250825204957.png]]
 
 ### Layer 7:  Application Layer
@@ -78,3 +78,7 @@ here the request and response in sender and receiver respectively for sender and
 - interacts with software  applications to implement network services
 - Examples: HTTP(Hypertext Transfer Protocol), FTP( File transfer Protocol), DNS ( Domain Name Server), SMTP ( Simple Mail Transfer Protocol)
 - layer where user directly  interact with data through application
+
+
+
+![[Pasted image 20250916104712.png]]

@@ -1,3 +1,4 @@
+- commonly known as IP suite
 - Transmission Control Protocol / Internet Protocol 
 - used to interconnect  devices on internet
 - defines how data is transferred in a network
@@ -63,3 +64,20 @@ connection establishment using 3 way handshake
 reliable data transfer by using sequence and acknowledgement number
 flow control so that sender doesn't overwhelm receiver
 error detection by  checksum that ensures header and data are not corrupted  during transmission
+
+
+### User Datagram Protocol (UDP)
+- UDP is a connectionless protocol operating at the transport layer (Layer 4)
+- Does not establish a connection before sending data
+- Does not provide delivery acknowledgment
+- Faster but less reliable than TCP
+- No error checking or retransmission mechanisms
+- IP address identifies the host
+- Port number identifies the sending and receiving processes
+- Port numbers range from 1 to 65535
+- Port 0 is reserved
+- Range comes from $2^{16}$−1= 65535
+- UDP is like standard mail without delivery confirmation
+- Cheaper and faster, but delivery is not guaranteed
+- TCP is used when delivery acknowledgment is required
+- TCP is connection-oriented and reliable
