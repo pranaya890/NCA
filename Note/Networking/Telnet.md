@@ -1,3 +1,5 @@
+- teletype network protocol
+- used for remote terminal connection
 it is a command line tool that lets us connect to another computer over a network, like internet  similar to ssh
 its like making remote phone call to computer
 but it can only receive and transfer plain text from my computer to a remote computer.
@@ -7,6 +9,16 @@ it is not very secure because its services can be exploited and it can send and 
 telnet [options] [host] [port]
 
 ```
+
+some services on  machines are 
+- Echo server : this server echos everything we send to it, default port 7
+- daytime server: replies current date and time  default port  13
+- web (HTTP ) server : serves webpages  default port 80
+Note: echo and daytime server are  considered security risk  and should not run 
+Note : to close connection use  `CTRL + ] `
+
+
+
 
 ### Netcat (nc)
 

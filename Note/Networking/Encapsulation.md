@@ -4,6 +4,7 @@
 - application layer creates the actual message
 - transport layer adds a transport header information like TCP/UDP header with port number
 - network header adds network header 
+- in data link layer the ethernet or WiFi  receives  the IP packet and adds  the proper  header and trailer creating a frame
 - At recieving end the reverse process happens called de-encapsulation
 - it provides a layer of security as data cant be intercepted and tampered
 - can also be used to verify whether the data is corrupted during transmission 
