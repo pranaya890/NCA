@@ -1,6 +1,13 @@
 ## Ports
 - ports are virtual entry points  through with the data  enters or leaves a device
 - a devices can have thousand ports but only few hundreds are actively used 
+- port are necessary for making multiple network or multiple services available 
+- there are total of 65535 ports
+- for example different ports are used for loading different webpages on same browser  this is done by establishing connection to remote webserver using different port
+- network connection are made between two ports an open port listening to server and  a randomly selected port on my computer
+- standard ports can also be altered especially in CTF setting
+![[Pasted image 20250922204336.png]]
+
 ### Types of port
 - Well known port (0-1023):  reserved for popular services like  HTTP, HTTPS and  FTP etc
 - Registered Ports (1024-49151): used by application that are not parts of the well known services but still standarized
@@ -69,3 +76,9 @@ Acknowledge : the server acknowledge the request , and the device is  assigned  
 - MAC addresses and ARP ensure data finds its way to the correct physical device.
 - TCP and UDP control how data is delivered, depending on the need for reliability and speed.
 - DHCP makes it easy to configure devices to join the network without manual input.
+
+
+### NetBIOS
+- synonym for Network Basic Input/ Output System 
+- provides services related to session layer of OSI  model allowing application on seperate computer to communicate over a LAN
+- windows NetBIOS can be found in port 139

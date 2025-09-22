@@ -8,49 +8,34 @@
         "type": "tabs",
         "children": [
           {
-            "id": "823b79e5fe22ac06",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Note/Networking/PING.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "PING"
-            }
-          },
-          {
-            "id": "1a52c7b5e2175b66",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Note/Networking/DNS Zone Transfer.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "DNS Zone Transfer"
-            }
-          },
-          {
             "id": "cecb33203e492cca",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Note/Networking/Network Devices.md",
+                "file": "Note/Networking/NMAP.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Network Devices"
+              "title": "NMAP"
+            }
+          },
+          {
+            "id": "8cfa74db7c357afd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Note/Networking/Ports and Protocols.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Ports and Protocols"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "nmap",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -198,10 +183,12 @@
   "active": "cecb33203e492cca",
   "lastOpenFiles": [
     "Note/Networking/Ports and Protocols.md",
+    "Note/Networking/NMAP.md",
+    "Pasted image 20250922204336.png",
+    "Note/Networking/Telnet.md",
     "Note/Networking/Network Devices.md",
     "Pasted image 20250922121829.png",
     "Notes/Note/Networking/Telnet.md",
-    "Note/Networking/Telnet.md",
     "Note/Networking/Encapsulation.md",
     "Note/Networking/DNS Zone Transfer.md",
     "Pasted image 20250922101424.png",
