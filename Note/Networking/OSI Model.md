@@ -57,6 +57,8 @@ Examples:
 - UDP (User Datagram Protocol)- faster but less reliable, connection less. Eg: online gaming ( slight data loss ruin gameplay) and live streaming
 ![[Pasted image 20250825201025.png]]
 - in TCP the connection begin with SYN (short for syncronization) flag which asks the server if it is ready to connect, then the server sends back SYN+ACK to client which acknowledges the signal received and sends the SYN flag signaling ready to connect. finally the client replies ACK which acknowledges the signal received and connection is established this process can be known as  TCP three way handshake
+![[Pasted image 20250925205228.png]]
+
 -  in UDP the sever request the data and client responds by sending the data there is no acknowledgement so it transfers only data but data flow and server locations are unknown or the data is delivered or not
 ### Layer 5: Session Layer
 - responsible for establishing,  managing and termination connection
