@@ -81,3 +81,105 @@ This can make it extremely difficult (if not impossible) to get an accurate read
 
 >[!warning]
 >SYN scan if run without  sudo permissions, Nmap defaults to the TCP Connect scan 
+
+### UDP scan
+- switch for nmap UDP scan is  `-sU`
+- when packet is sent to UDP port  there should be no response also  called `open|filtered`
+- it can be used to suspect the port could be fire-walled
+- if it gets UDP response which is very unusual then the port is marked open
+- if  there is no response from the port on request then the request is sent again for double check if still there is no response  the port is marked `open|filtered`
+- when a packet is sent to closed port the target port should respond with ICMP packet containing the packet  containing the message that the port is unreachable which identifies the closed port
+- due to this difficulty in identifying open or closed port UDP scan is comparitively slower
+- for this reason it is good practice to run  an NMAP with  `--tcp-ports <number>` enabled
+``` Shell
+nmap -sU --top-ports 20 <target>
+#this will scan 20 most commonly used UDP ports
+```
+- when scanning UDP ports Nmap usually sends completely empty request just raw UDP packets 
+- for ports which are usually occupied by well known services will  instead send a protocol-specific payload which is more likely to draw out a response from which a more accurate result can be drawn
+
+### NULL, FIN and Xmas scan
+- these scans are less commonly used than any other 
+- they tend to be stealthier, relatively speaking than  a SYN "stealth" scan
+
+
+NULL scan: 
+- (-sN) are the scan used when the TCP request is sent without a flag
+- In null scan as per RFC the target host should respond with RST (Reset flag) if the port is closed
+![[Pasted image 20251013131850.png]]
+- in above screenshot there is RST and ACK flag in response to  NULL scan
+
+FIN scan: 
+- -sF scan sends a FIN flag instead of sending empty packets usually to close an active connection
+![[Pasted image 20251013132309.png]]
+
+Xmas scan:
+- -sX scan sends a malformed TCP packets and expects a RST response for closed ports 
+- it is referred to an xmas scan because  the flag set by it  PSH, URG and FIN give it the apeallling blinking christmas tree when viewed as  a packet capture in wireshark 
+- ![[Pasted image 20251013132747.png]]
+
+
+- the open ports with these scans are also identical and is very similar to UDP scan
+- if the port is open there is no response to malformed packet
+---------
+-----
+
+- these scans only identify packets as open|filtered, closed or filtered
+- If a port is identified as filtered with one of these scans then it is usually because the target has responded with an ICMP unreachable packet.
+
+
+### ICMP network scanning
+- our first objective is to obtain a "map" of the network structure or, 
+- in other words, we want to see which IP addresses contain active hosts, and which do not.
+- we can do this by using nmap to perform a "ping sweep"
+- in this scan nmap sends a ICMP packet to each possible IP address for the specified network
+- when it receives a response it marks IP address that responded as being alive
+- we use `-sn` switch for performing a ping sweep with ip ranges with `-` or CIDR notation
+``` Bash
+nmap -sn 192.168.0.1-254 #using Hyphen
+nmap -sn 192.168.0.10/24 #CIDR notation
+``` 
+- `-sn` switch tells Nmap not to scan any ports  --forcing it to rely primarily on ICMP echo packets or ARP request on local network if run with sudo or directly as root user to identify target
+- `-sn` switch also cause nmap to send a TCP SYN packet to port 443 to the target  as well as TCP ACK (or TCP SYN if not run as root ) packet to port 80 of the target
+
+### Nmap Scripting Engine (NSE)
+- it is a script written in lua programming language
+- it can be used to scan variety of things from scanning vulnerabilities to automating exploits for them
+- particularly used for reconnaissance 
+- some categories in NSE are:
+     - safe: wont effect the target
+     - intrusive: not safe likely to affect the target
+     - vuln: scan for vulnerabilities
+     - exploit: attempt to exploit the vulnerability
+     - auth: attempt to bypass  authentication for running services ( Eg: login to FTP server anonymously)
+     - brute: attempt to bruteforce credentials for running a services
+     - discovery: attempt to query running services for further information about the network ( eg: query an SNMP server)
+
+>[!Note]
+>Simple Network Management Protocol (SNMP) is an internet standard protocol used to monitor and manage network devices connected over an IP network, including routers, switches, servers, printers, and other hardware.
+
+>[!Alert]
+>https://nmap.org/book/nse-usage.html for details
+
+
+#### running a NSE script
+- the switch for activating NSE script  from the `vuln` category is `--script=vuln
+- for safe category is `--script=safe`
+>[!note]
+>  only scripts which target an active service will be activated
+
+- to run a NSE script we can use `--script=<script_name>`  
+- Example: `--script=http-fileupload-exploiter`
+- multiple script can be run simultaneously by separating with commas
+- Example: `--script=smb-enum-users,smb-enum-shares`
+- for running a script that require argument: argument can be passed using `--script-args` nmap switch
+- we can use `http-put` script to upload file using put method
+- this takes two argument :
+	- URL to upload the file to
+	- File location on disk
+- for Example: `nmap -p 80 --script http-put --script-args http-put.url='/dav/shell.php',http-put.file='./shell.php'`
+>[!note] 
+>argument are separated by commas and connected to corresponding script  with periods
+>i.e `<script-name>,<argument>`
+
+- https://nmap.org/nsedoc/ for more script and its corresponding argument
