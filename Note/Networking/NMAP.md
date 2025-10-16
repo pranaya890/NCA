@@ -183,3 +183,35 @@ nmap -sn 192.168.0.10/24 #CIDR notation
 >i.e `<script-name>,<argument>`
 
 - https://nmap.org/nsedoc/ for more script and its corresponding argument
+
+### Searching NSE Script
+- Nmap scripts are stored locally at `/usr/share/nmap/scripts`.
+- Nmap looks in that directory by default when we specify scripts.
+- The file `/usr/share/nmap/scripts/script.db` is a formatted text file (not a real DB) listing filenames and categories.
+- we can use `grep "term" /usr/share/nmap/scripts/script.db` to search scripts by name or category (example: `grep "ftp" /usr/share/nmap/scripts/script.db`).
+- Use `ls -l /usr/share/nmap/scripts/*term*` to list matching script files (wildcards `*` on either side of the search term).
+- You can search for script categories the same way (example: `grep "safe" /usr/share/nmap/scripts/script.db`).
+- If scripts are missing, `sudo apt update && sudo apt install nmap` will usually restore official scripts.
+- To install a single script manually: `sudo wget -O /usr/share/nmap/scripts/<script-name>.nse https://svn.nmap.org/nmap/scripts/<script-name>.nse`.
+- After adding or removing scripts, run `nmap --script-updatedb` to update `script.db`.
+- You must run `nmap --script-updatedb` after creating your own NSE script and placing it in the scripts directory.
+- Writing your own NSE scripts is possible using Lua; basic Lua knowledge is sufficient to create custom scripts.
+
+### Firewall Evasion
+
+>[!Note] A firewall is security tool, hardware or software that is used to filter network traffic by stopping unauthorized incoming and outgoing traffic.
+
+- our typical windows host with its default firewall blocks all ICMP packets by default
+- Nmap pings hosts by default; blocked ICMP can make Nmap mark a host as dead and skip scanning.
+- `-Pn` tells Nmap not to ping hosts first (treat targets as alive) — bypasses ICMP block but may greatly increase scan time if the host is actually down.
+- On a local network Nmap can use ARP requests to detect host activity.
+- `-f` fragments packets (splits into smaller pieces) to reduce detection by firewalls/IDS.
+>[!Note] Intrusion Detection System (IDS) is a system that detects unauthorised network and system intrusions. Examples include detecting unauthorised devices connected to the local network and unauthorised users accessing a system or modifying a file
+
+- `--mtu <number>` sets packet MTU size (multiple of 8) as an alternative to `-f` for finer control.
+- `--scan-delay <time>ms` inserts a delay between sent packets — useful for unstable networks or evading time-based firewall/IDS triggers.
+- `--badsum` generates packets with invalid checksums; real stacks drop them, but some firewalls/IDS may respond without validating the checksum — can indicate presence of a firewall/IDS.
+>[!note] a checksum refers to a small piece of data calculated from the contents of a packet to verify its integrity
+>A correct checksum means the packet is valid and will be processed normally.
+
+

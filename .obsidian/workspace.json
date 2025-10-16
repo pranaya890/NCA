@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "IDS",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -166,7 +167,7 @@
       "bases:Create new base": false
     }
   },
-  "active": "5c9da3b6101c1a9f",
+  "active": "d43906c48a38ef05",
   "lastOpenFiles": [
     "Pasted image 20251013132747.png",
     "Pasted image 20251013132309.png",
