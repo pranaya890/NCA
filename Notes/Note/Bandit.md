@@ -138,7 +138,7 @@ for solving bandit 20 we have to execute the file bandit10-do which is an execut
 ![[Pasted image 20250718222542.png]]
  bandit 20-21
  pw
- 0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO
+0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO
  the file in the directory named `suconnect` is an executable file
  ![[Pasted image 20250722190443.png]]
  while executing the file `suconnect` it shows its executable syntax `./suconnect <portnumber>`
