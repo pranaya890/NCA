@@ -49,3 +49,22 @@ enum4linux -a 192.0.0.1
 ```
 - Basic Tags
 ![[Pasted image 20251103230230.png]]
+
+
+### Exploiting SMB
+- vulnerabilities such as CVE-2017-7494 that can allow remote code execution by exploiting SMB
+- sometimes the best way into the system is due to misconfiguration of the system
+- exploiting anonymous SMB share access- a common misconfiguration that can allow us to gain information that will lead to a shell
+- from enumeration we know that SMB share location and name of intresting SMB share
+#### SMB client
+- to access an SMB share, we need a client to access resources on servers
+- fot that we will be using SMBClient because it is part of default samba suite 
+- Syntax:
+``` Shell
+smbclient //[IP]/[SHARE] -U [USERNAME] -p [PORT]
+smbclient //11.12.13.14/secrets -U Anonymous -p 445
+```
+
+#### SMB client command
+- after entering the share we can use available command by typing help
+- 

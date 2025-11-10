@@ -17,6 +17,42 @@ some services on  machines are
 Note: echo and daytime server are  considered security risk  and should not run 
 Note : to close connection use  `CTRL + ] `
 
+in short:
+- Telnet is an application protocol that allows users to connect to and execute commands on a remote machine running a Telnet server.
+- A Telnet client is used to establish the connection with the Telnet server.
+-  Telnet sends all communication in plain text, including usernames and passwords.
+- It has no encryption or security mechanisms, making it vulnerable to interception and attacks.
+- Because of this, Telnet has largely been replaced by SSH (Secure Shell), which encrypts transmitted data for secure communication.
+- The user connects to the server using the Telnet protocol.
+- This is done by typing the telnet command in a terminal or command prompt.
+- After connecting, the user can execute commands on the remote server via the Telnet prompt.
+- Connection syntax: `telnet [IP address] [port]`
+Example: `telnet 192.168.1.10 23`
+Port 23 is Telnet’s default port.
+
+### Exploiting telnet
+Telnet is insecure: no encryption, sends all communication in plain text  
+Telnet generally has poor access control  
+Telnet client and server may have CVEs  
+ CVEs info  at - [https://www.cvedetails.com/](https://www.cvedetails.com/) and - [https://cve.mitre.org/](https://cve.mitre.org/)   
+CVE = Common Vulnerabilities and Exposures (publicly disclosed security flaws)  
+More likely to find exploitable telnet misconfigurations than protocol bugs  
+From enumeration: a poorly hidden telnet service is running on the machine  
+From enumeration: the telnet service is labeled “backdoor”  
+From enumeration: possible username “Skidy” is implicated  
+A reverse shell gives command/code execution on the target machine  
+A reverse shell is where the target connects back to the attacker’s listening port  
+The attacker must run a listener to receive the reverse connection  
+Using telnet as an initial foothold can lead to obtaining a full reverse shell  
+we can connect to telnet using 
+``` Shell
+    telnet [ip] [port]
+```
+
+
+- to start the TCP dump listener
+- ![[Pasted image 20251110212729.png]]
+- This command captures ICMP packets (like ping requests and replies) traveling over the `tun0` network interface, using `tcpdump`.
 
 
 
@@ -91,3 +127,22 @@ sockets in computer network can be defined as the one endpoint of two-way commun
 ![[Pasted image 20250721210306.png]]
 end point is combination of IP address and a port number
 each TCP (transmission control protocol ) can be uniquely identified by using its two end point
+
+
+### File Transfer Protocol
+- FTP stands for File Transfer Protocol
+- It is used for remote transfer of files over a network
+- Works on a client-server model
+- Uses two channels:
+- command (control) channel for sending commands and responses
+- data channel for transferring data
+- The client initiates a connection to the server
+- The server verifies login credentials and opens a session
+- Once connected, the client can execute FTP commands on the server
+- FTP can operate in two modes:
+- Active mode: client opens a port and listens, server connects to it
+- Passive mode: server opens a port and listens, client connects to it
+- Separation of command and data channels allows commands to be sent while data transfers are ongoing
+- This improves efficiency during large or slow file transfers
+- Technical details and specifications are defined in RFC 959 by the Internet Engineering Task Force (IETF)
+- Reference link: [https://www.ietf.org/rfc/rfc959.txt](https://www.ietf.org/rfc/rfc959.txt)
