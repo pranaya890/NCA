@@ -146,3 +146,33 @@ each TCP (transmission control protocol ) can be uniquely identified by using it
 - This improves efficiency during large or slow file transfers
 - Technical details and specifications are defined in RFC 959 by the Internet Engineering Task Force (IETF)
 - Reference link: [https://www.ietf.org/rfc/rfc959.txt](https://www.ietf.org/rfc/rfc959.txt)
+### Enumeration FTP
+- Enumeration is essential for attacking network services and protocols.
+- Use `nmap` for effective port scanning; consult `tool -h/--help` or `man [tool]` if stuck.
+- FTP client required to interact with FTP servers; test by running `ftp` and looking for the `ftp>` prompt.
+- If no FTP client is present, install with `sudo apt install ftp`.
+- Target: exploit anonymous FTP login to access files that may enable shell access.
+- Anonymous FTP access can expose sensitive files and lead to privilege escalation or shell pop.
+- Some FTP servers reveal home-directory existence via `cwd` responses issued before authentication. (Change Working Directory)
+- Legacy `in.ftpd` and similar servers may show different `cwd` responses for existing vs. non-existing home directories.
+- Pre-auth `cwd` probing can indicate user accounts on vulnerable/legacy systems.
+- The `cwd` pre-auth vulnerability is documented: Exploit-DB exploit #20745.
+- Always check FTP server responses and available files after anonymous login for potential exploits.
+
+### Exploiting FTP
+- FTP command and data channels are unencrypted; traffic can be intercepted and read.
+- Man-in-the-middle attacks (e.g., ARP poisoning) can capture FTP credentials and data.
+- JSCape demonstrates ARP-poisoning to intercept FTP traffic.    
+- Weak or default passwords on FTP servers are a common exploitation avenue.
+- From enumeration: FTP server found and a possible username discovered.
+- Next step: brute-force the FTP password using an online password-cracking tool.
+- Hydra is a fast online password-cracking tool supporting 50+ protocols (including FTP).
+- Example Hydra command: `hydra -t 4 -l dale -P /usr/share/wordlists/rockyou.txt -vV 10.10.10.6 ftp`
+- `hydra` — runs the Hydra tool.
+- `-t 4` — number of parallel connections per target.
+- `-l [user]` — specifies the username to attack.
+- `-P [path]` — path to the password dictionary file.
+- `-vV` — very verbose mode; shows each login+password attempt.
+- `[machine IP]` — target machine IP (example: `10.10.10.6`).
+- `ftp` — specifies the protocol to attack.
+- Run Hydra responsibly and only against systems you have permission to test.

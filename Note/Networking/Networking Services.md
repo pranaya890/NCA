@@ -5,3 +5,9 @@
 ### Using telnet
 ![[Pasted image 20251110211816.png]]
 
+### Using FTP
+![[Pasted image 20251111202257.png]] 
+ using nmap to scan ports of host
+ ![[Pasted image 20251111215529.png]]
+ ![[Pasted image 20251111215556.png]]
+ 
