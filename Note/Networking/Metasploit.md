@@ -195,5 +195,38 @@ set PARAMETER_NAME VALUE
 - we can also clear any parameter using the `unset` command
 - we can clear all set parameter using `unset all`
 
+### setg Command
+- `setg` sets a value globally for all Metasploit modules
+- `set` sets a value only for the current module
+- Global values set with `setg` remain when switching modules
+- Global values can be removed using `unsetg`
+- Example flow:
+- Load the ms17_010_eternalblue exploit
+- Set `RHOSTS` using `setg`
+- Use `back` to exit the exploit context
+- Load an auxiliary scanner module
+- `show options` displays `RHOSTS` already filled with the global value
 
-setg command
+![[Pasted image 20251123204747.png]]
+
+### Using modules
+- after setting parameters we can launch module using `exploit` command
+- it also supports run command which is alias for exploit command
+- `exploit` command can be used  without any parameter  or using `-z` parameter
+- it will run the exploit command  and background the session as soon as it opens
+![[Pasted image 20251123205912.png]]
+- this will return the context prompt from which we have run the exploit
+- some module allow `check` option 
+- this will check if the target system is vulnerable without exploiting it
+### Sessions
+- after exploiting vulnerability the session will be created
+- this is the communication channel established between the target system and metasploit
+- we can use `background` command to background the session prompt and go back to msfconsole
+![[Pasted image 20251123210356.png]]
+- alternatively `CTRl+Z` can be used to background session
+- the `sessions` command can be used from msfconsole or any context  to see the exisisting session
+
+![[Pasted image 20251123212148.png]]
+- to interact with the system we can use `sessions -i` followed by desired session number
+-  `sessions -i 1`
+- 

@@ -35,3 +35,5 @@ in cisco packet tracker inside ip address DHCP is dynamic ip addressing
 - it is because it is the first time sending data packets the data will reach the switch but not the device
 - the switch uses ARP so it has to maintain MAC address table
 - the first packet is then lost then other are sent 
+
+### Deploying Devices
