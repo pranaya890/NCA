@@ -229,4 +229,30 @@ set PARAMETER_NAME VALUE
 ![[Pasted image 20251123212148.png]]
 - to interact with the system we can use `sessions -i` followed by desired session number
 -  `sessions -i 1`
-- 
+
+
+- the `save` command will save the current configuration 
+
+### Workspace in msfconsole
+- it help us to keep track of all host scan and activities  allowing us to organize the data efficiently based on our target
+- we can use `workspace` command to see all the workspace
+![[Pasted image 20251124212546.png]]
+
+- we can change workspace by using `workspace workspace_name`
+![[Pasted image 20251124212634.png]]
+- we can add workspace name using `workspace -a workspace_name`
+![[Pasted image 20251124212736.png]]
+![[Pasted image 20251124212756.png]]
+
+- we can delete the workspace using `workspace -d  workspace_name`
+![[Pasted image 20251124213121.png]]
+
+- we can use `workspace -r workspace_name workspace_new_name`  
+![[Pasted image 20251124213300.png]]
+
+- we can use `hosts` command to check the host present inside the workspace
+![[Pasted image 20251124213402.png]]
+
+- we can scan machine using `db_nmap ip_address`
+- this will also assign the host like 
+![[Pasted image 20251124213605.png]]
