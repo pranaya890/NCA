@@ -75,3 +75,37 @@ For some end devices, such as PCs and laptops, Packet Tracer provides a desktop 
 A server has all of the functions of a host with the addition of one more tab, the Services tab. This tab allows a server to be configured with common server processes such as HTTP, DHCP, DNS, or other services, as shown in the figure.
 ![[Pasted image 20251127214528.png]]
 
+### Physical and Logical mode
+- there are two ways of looking a network in cisco packet tracer
+- logical mode shows us how devices are connected in the network 
+- physical mode shows where the devices are  located in the network
+- we can switch to logical mode by using ` Shift +L` and into`Shift+ P` for physical mode
+
+### Cisco Packet Tracer file types
+- Packet Tracer has the ability to create four different types of files. These file types are used for different purposes and include: .pka, .pkt, .pksz, and .pkz.
+#### `.pka` file
+- .pka files are Packet Tracer Activity files.
+- The “a” in .pka stands for activity.    
+- This is the most common file type used in Packet Tracer learning environments.
+- A .pka file contains two networks:
+- Initial network – the one learners interact with when opening the activity.
+- Answer network – runs in the background for scoring and feedback; not accessible to learners.
+- .pka files usually include an instructions window.
+- The instructions window provides steps and procedures for completing the activity, assignment, or assessment.
+- The instructions window can show completion percentage to track progress.
+
+#### `.pkt` file
+- .pkt files are created when a simulated network is built and saved in Packet Tracer.
+- A .pkt file can include embedded graphic background images.
+- .pkt files do not contain an instructions window.
+- .pkt files do not include activity scoring.
+#### `.pksz` file
+- .pksz files are specific to Packet Tracer Tutored Activities (PTTA).
+- These files bundle a .pka file, media assets, and a scripting file for the hinting system.
+- They provide contextualized hints to support students while completing the activity 
+####  `.pkz` file
+- The File menu includes the option "Save As PKZ...".
+- This file type was previously used to embed images and other files in a Packet Tracer file.
+- Images are now embedded directly into .pkt or .pka files by default.
+- The .pkz file type is considered deprecated.
+
