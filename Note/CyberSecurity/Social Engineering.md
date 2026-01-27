@@ -1,0 +1,8 @@
+- The manipulation of individuals to divulge sensitive information, through various forms of communication
+- it refers to manipulate the user to make mistakes
+- Examples: sharing password, opening malicious files approving a payment
+- the term "social" means the target of such attack is a human being not a computer system
+- consequently, the attacker relies on psychological tricks to get the target user to cooperate
+- Some psychological factors that can play a key role in the success of such attacks are urgency, curiosity, and authority
+- some consider it as "human hacking"
+- 

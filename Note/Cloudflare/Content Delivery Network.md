@@ -1,0 +1,3 @@
+- a geographically distributed group of server that caches content close to end user
+- allows the quick transfer of assets needed for loading internet content 
+- if configured properly it helps to protect websites from  malicious attacks like DDOS (Distributed Denial of Services)

@@ -269,3 +269,38 @@ How it works? : https://docs.docker.com/compose/intro/compose-application-model/
 | environment | This instruction is used to pass environment variables (not secure), i.e. passwords, usernames, timezone configurations, etc. | MYSQL_ROOT_PASSWORD=helloworld |
 | image       | This instruction defines what image the container should be built with (you will need to use this or build). | mysql:latest |
 | networks    | This instruction defines what networks the containers will be a part of. Containers can be part of multiple networks (i.e. a web server can only contact one database, but the database can contact multiple web servers). | ecommerce |
+
+
+### Docker Socket
+- docker mainly consist of  two programs: Docker Client and Docker  Server
+- it is a client server model
+- it communicates with each other to form the docker we use
+- docker achieves this communication using something called a socket 
+- it is essential features that  allows data to be communicated
+- a socket can either be a network connection or a file
+- it allows interprocess communication (IPC)
+- in docker context, Docker server is just an API
+>[!note] API, which stands for Application Programming Interface, is a set of rules and protocols for building software and applications. An API allows different software programs to communicate with each other. It defines methods of communication between various components, including the kinds of requests that can be made, how they're made, the data formats that should be used, and conventions to follow.
+
+- Server uses API to listen for request whereas client used API to send request
+- Example:  `docker run helloworld`. The Docker Client will request the Docker server to run a container using the image "helloworld"
+
+![[Pasted image 20251222211952.png]]
+- we can interact to docker  server using commands like `curl` or API developer tool like postman
+>[!note]
+> the host machine running docker can be configured to  process commands sent from another device
+> this is a dangerous vulnerability if not correctly configured
+> it means someone can remotely start or stop or access docker container 
+ 
+
+
+
+
+
+
+
+
+
+- 45.137.70.111
+
+[https://n8n.io/](https://n8n.io/ "https://n8n.io/")
