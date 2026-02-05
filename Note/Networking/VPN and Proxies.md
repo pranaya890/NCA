@@ -1,6 +1,6 @@
 - VPNs and Proxies are crucial tool for privacy, security and bypassing restrictions
 - helps to mask our identity and route our traffic through another server
-
+- it uses AES encryption( Advanced Encryption Standard is a symmetric block cipher algorithm)
 ### Virtual Private Network (VPN)
 - technology that creates secure encrypted tunnel between our device and  a remote server
 - tunnel protects our data from prying (interested in a person's private affairs) eyes such as ISPs, hackers  or government survelliance
