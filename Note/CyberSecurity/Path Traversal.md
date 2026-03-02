@@ -1,0 +1,5 @@
+- known as directory traversal
+- enables attacker to read arbitary file on the server that is running an application
+- that may include: application code and data, credentials for back-end system and sensitive operating system files
+- sometimes attacker might be able to write  to arbitary files on the server, allowing them to modify application data or behavior and ultimately take full control of the server
+- 
