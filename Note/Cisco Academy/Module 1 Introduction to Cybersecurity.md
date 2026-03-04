@@ -115,3 +115,10 @@ State-sponsored attackers gather intelligence or commit sabotage on behalf of th
 - gain unauthorized access to computing devices
 - use social engineering to gain unauthorized access  to organizational data
 
+
+## Cyber Warfare
+- ue of technology to penetrate and attack  another nation's computer system and network in an attempt to cause damage or disrupt services.
+- used mainly to gain advantage over adversaries whether they are nations competitors 
+- to gather information and defense secrets
+- to impact another nation infrastructure like shutting down power grid
+- 
