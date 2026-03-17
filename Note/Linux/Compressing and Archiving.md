@@ -89,3 +89,7 @@ bunzip2 file.txt.bz2
 
 ![[Pasted image 20250815121353.png]]
 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
+
+
+
+![[Pasted image 20260317200027.png]]

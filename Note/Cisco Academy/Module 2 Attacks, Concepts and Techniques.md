@@ -69,4 +69,30 @@
 - unknown process running
 - programs turning off or reconfiguring themselves
 - emails being sent without my knowledge or consent
-- 
+
+## Methods of Exploitation
+### Social Engineering
+- technique of manipulating people into performing actions or divulging confidential information
+- rely on people's weakness to be helpful, but also prey on their weakness
+- for example: attacker calls authorized employee with urgent problem  that requires network access and appeal to the employees vanity or greed invoke authority by using name-dropping techniques in order to gain this access
+#### Common Social Engineering Attacks
+- Pretexting: when attacker calls an individual and lies them in an attempt to gain access to privileged data. For Example,pretending to need a person’s personal or financial data in order to confirm their identity
+- Tailgating: When an attacker follows an authorized person into a secure physical location
+- Something for Something: This is when an attacker request personal information from a person in exchange of something. 
+
+### Denial of Service (DoS)
+-  type of network attack that is relatively simple to carry out even by unskilled attacker
+- results in some sort of interruption of network service  to user, device or application
+#### Main types of DoS
+- Overwhelming quantity of service: when the attacker sends enormous amount of data at the rate which a target cannot handle, causes a slowdown in transmission or response, or the device or service to crash
+- Maliciously formatted packets: collection of data that flows between a source or receiver  computer or application over a network which the target cant handle. it may cause the target system to run slow or crash
+
+### Distributed DoS
+- similar to DoS but originates from multiple, coordinated sources
+- An attacker builds a network (botnet) of infected hosts called zombies, which are controlled by handler systems.
+- The zombie computers will constantly scan and infect more hosts, creating more and more zombies.
+- When ready, the hacker will instruct the handler systems to make the botnet of zombies carry out a DDoS attack.
+
+![[Pasted image 20260306081714.png]]
+
+### Botnet
