@@ -42,6 +42,8 @@ Good hash function follows these rules:
 - Process: enter password-> hash the input -> compare it to stored hash
 -  same password= same hash
 - this opens up the possibility for attackers to pre-compute list of hashes and corresponding password called rainbow table attacks
+![[Pasted image 20260506201515.png]]
+
 
 ### Rainbow Tables
 - rainbow table is a precomputed list of hashes for known passwords
