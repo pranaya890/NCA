@@ -83,3 +83,34 @@ await fetch("http://154.57.164.72:30931/api.php/city", {
 ```
 
 ### Update
+ - we have `PUT` and `DELETE` HTTP methods to update 
+ - `PUT` is used to update API entries and modify their details  while `DELETE` is used to remove a  specific entity
+ >[!Note]
+ >The HTTP `PATCH` method may also be used to update API entries instead of `PUT`. To be precise, `PATCH` is used to partially update an entry (only modify some of its data "e.g. only city_name"), while `PUT` is used to update the entire entry. We may also use the HTTP `OPTIONS` method to see which of the two is accepted by the server, and then use the appropriate method accordingly. In this section, we will be focusing on the `PUT` method, though their usage is quite similar.
+ 
+ - using `PUT` is similar to `POST` 
+ - we have to mention the name of entity we want to edit in the URL otherwise API will not know which entity to edit
+ - continuing the previous examples: we have to specify the `city` name in URL change the request method to `PUT`  and provide the JSON data as we provided before
+ ```
+ curl -X PUT http://154.57.164.81:31192/api.php/city/london -d '{"city_name":"New_London","country_name":"HTB"}' -H 'Content-Type:application/json'
+ ```
+- using above command we can update the london city by `New_London`
+  and can be viewed using `curl -s http://154.57.164.81:31192/api.php/city/london | jq`
+  ![[Pasted image 20260514221555.png]]
+
+>[!Note]
+>In some APIs, the `Update` operation may be used to create new entries as well. Basically, we would send our data, and if it does not exist, it would create it. For example, in the above example, even if an entry with a `london` city did not exist, it would create a new entry with the details we passed. In our example, however, this is not the case. Try to update a non-existing city and see what you would get.
+
+
+### Delete
+- we can delete the city by simply specifying the name and use HTTP DELETE Method
+`curl -X DELETE http://154.57.164.61:30588/api/city/london`
+
+![[Pasted image 20260514221346.png]]
+
+
+### Conclusion
+- in real web applications these operations may not be allowed to all users or it would be considered vulnerable if anyone can modify or delete
+- each user may have certain privilege to read or write or both
+- To authenticate our user to use the API, we would need to pass a cookie or an authorization header (e.g. JWT)
+- 
